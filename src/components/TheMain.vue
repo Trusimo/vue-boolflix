@@ -39,7 +39,11 @@ export default {
                 this.moviesList = resp.data.results;
             });
         },
-    }}
+    },
+    mounted() {
+        this.fetchData();
+    }
+}
 
 </script>
 
