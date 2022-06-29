@@ -1,8 +1,8 @@
 <template>
     <div id="app">
         <div class="container">
-        <input type="text" v-model="searchText">
-            <button>Cerca</button>
+        <input type="text" v-model="userSearch">
+            <button @click="cerca">Cerca</button>
         </div>
 
     </div>
@@ -15,8 +15,14 @@ export default {
     name: 'TheSearchBar',
     data() {
         return {
-            
-}}
+            userSearch: ""
+}},
+    methods: {
+        cerca() {
+            state.searchText = this.userSearch;
+            this.$emit("searchTextChanged", this.userInput)
+        }
+    }
 }
 </script>
 

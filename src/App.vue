@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <TheSearchBar></TheSearchBar>
-    <TheMain></TheMain>
+    <TheSearchBar @searchTextChanged="onSearchTextChanged"></TheSearchBar>
+    <TheMain :searchText="searchText" :moviesList="moviesList"></TheMain>
 
   </div>
 </template>
@@ -15,7 +15,18 @@ export default {
   components: {
     TheSearchBar,
     TheMain
-}
+},
+  data() {
+    return {
+      searchText: "",
+      moviesList: []
+    }
+  },
+  methods: {
+    onSearchTextChanged(userInput) {
+      this.searchText = userInput;
+    }
+  }
 }
 </script>
 
