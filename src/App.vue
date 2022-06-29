@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <TheSearchBar></TheSearchBar>
+    <TheMain></TheMain>
 
   </div>
 </template>
 
 <script>
 import TheSearchBar from './components/TheSearchBar.vue';
+import TheMain from './components/TheMain.vue';
 
 export default {
   name: 'App',
   components: {
-    TheSearchBar
+    TheSearchBar,
+    TheMain
 }
 }
 </script>
