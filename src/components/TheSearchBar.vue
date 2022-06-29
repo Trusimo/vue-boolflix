@@ -19,8 +19,9 @@ export default {
 }},
     methods: {
         cerca() {
+            console.log("paperino")
             state.searchText = this.userSearch;
-            this.$emit("searchTextChanged", this.userInput)
+            this.$emit("searchTextChanged", this.userSearch)
         }
     }
 }
