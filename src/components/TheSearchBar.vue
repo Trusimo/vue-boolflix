@@ -23,7 +23,7 @@ export default {
             state.searchText = this.userSearch;
             this.$emit("searchTextChanged", this.userSearch)
         }
-    }
+    },
 }
 </script>
 

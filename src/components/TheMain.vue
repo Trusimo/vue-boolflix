@@ -4,6 +4,8 @@
             <li v-for="movie in moviesList" :key="movie.id">
                 <MovieCards :movie="movie">
                     {{ movie.original_title}}
+                    {{ movie.language }}
+                    {{ movie.vote_count }}
                 </MovieCards>
             </li>
         </ul>
@@ -43,10 +45,11 @@ export default {
             });
         },
     },
-    mounted() {
-        this.fetchData();
-    }
-}
+    watch: {
+        searchText: function () {
+            this.fetchData();
+        },
+    }}
 
 </script>
 
