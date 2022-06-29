@@ -23,8 +23,8 @@ export default {
     }
   },
   methods: {
-    onSearchTextChanged(userInput) {
-      this.searchText = userInput;
+    onSearchTextChanged(userSearch) {
+      this.searchText = userSearch;
     }
   }
 }
