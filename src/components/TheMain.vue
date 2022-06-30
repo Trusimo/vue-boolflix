@@ -4,8 +4,6 @@
             <li v-for="movie in moviesList" :key="movie.id">
                 <MovieCards :movie="movie">
                     {{ movie.original_title}}
-                    {{ movie.language }}
-                    {{ movie.vote_count }}
                 </MovieCards>
             </li>
         </ul>
@@ -31,9 +29,13 @@ export default {
         }
     },
     methods: {
-        fetchData() {
+        /**
+         *
+         * @param {"movie"|"tv"} type
+         */
+        fetchData(type) {
             console.log("topolino")
-            axios.get("https://api.themoviedb.org/3/search/movie", {
+            axios.get("https://api.themoviedb.org/3/search/" + type, {
                 params: {
                     api_key: "4748e32efaeb377f469c7ccfd87624c6",
                     query: this.searchText,
@@ -47,7 +49,8 @@ export default {
     },
     watch: {
         searchText: function () {
-            this.fetchData();
+            this.fetchData("movie");
+            this.fetchData("tv");
         },
     }}
 
