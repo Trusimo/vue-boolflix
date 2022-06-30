@@ -42,6 +42,8 @@ export default {
 
 input {
     padding: 8px;
+    background-color: rgb(60, 60, 60);
+    color: white
 }
 
 button {

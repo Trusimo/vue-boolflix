@@ -60,7 +60,7 @@ export default {
             if (this.movie.overview) {
             return this.movie.overview;
         }
-        return this.movie.overview;
+            return "Nessun riassunto disponibile";
         }
     }
 } 

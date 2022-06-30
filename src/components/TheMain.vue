@@ -3,7 +3,7 @@
         <div class="bg-grey">
             <div class="container">
             <div class="row gy-4">
-                <div class="col" v-for="movie in moviesList" :key="movie.id">
+                <div class="col-xs-12 col-4" v-for="movie in moviesList" :key="movie.id">
                     <MovieCards :movie="movie">
                         {{ movie.original_title}}
                     </MovieCards>
@@ -68,7 +68,7 @@ export default {
 <style>
 .bg-grey {
     background-color: rgb(53, 52, 52);
-    height: 100vw;
+    height: 100%;
     padding: 30px;
 }
 
