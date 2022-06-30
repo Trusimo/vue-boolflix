@@ -1,6 +1,7 @@
 <template>
     <div>
         {{ movieTitle }}
+        {{ movieLanguage }}
     </div>
 
 </template>
@@ -17,7 +18,15 @@ export default {
             return this.movie.name;
         }
         return this.movie.title;
-    }}
+    },
+        movieLanguage() {
+            console.log("lingua")
+            if (this.movie.original_language) {
+                return this.movie.original_language
+            }
+            return this.movie.original_language
+        }
+    } 
 }
 
 </script>
