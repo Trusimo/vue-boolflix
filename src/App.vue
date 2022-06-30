@@ -33,7 +33,7 @@ export default {
 <style lang="scss">
 @import "assets/scss/main.scss";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka:wght@400;700&display=swap');
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

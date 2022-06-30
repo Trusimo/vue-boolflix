@@ -4,7 +4,6 @@
             <li v-for="movie in moviesList" :key="movie.id">
                 <MovieCards :movie="movie">
                     {{ movie.original_title}}
-                    {{ movie.original_language}}
                 </MovieCards>
             </li>
         </ul>
