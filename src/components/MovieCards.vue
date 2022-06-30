@@ -4,8 +4,14 @@
 
         <div class="overlay">
             <div class="info-position">
-                {{ movieTitle }}
-                <span class="fi" :class="'fi-' + languageFlag"></span>
+                Titolo: {{ movieTitle }}
+                <div>
+                    Lingua: 
+                    <span class="fi" :class="'fi-' + languageFlag"></span>
+                </div>
+                <div>
+                    Riassunto: {{ movieOverview}}
+                </div>
             </div>
         </div>
     </div>
@@ -48,6 +54,13 @@ export default {
                 return urlBase + imgSize + this.movie.poster_path;
             }
                 return "/imgError.png"
+        },
+
+        movieOverview() {
+            if (this.movie.overview) {
+            return this.movie.overview;
+        }
+        return this.movie.overview;
         }
     }
 } 
@@ -57,7 +70,9 @@ export default {
 <style>
 
 .film-container {
-    position: relative
+    position: relative;
+    color: white;
+    font-size: 14px;
 }
 
 .overlay {
@@ -77,12 +92,12 @@ export default {
 
 .info-position {
     position: absolute;
-    top: 14%;
-    left: 4%;
+    padding-right: 90px;
 }
 
-.locandina-black:hover {
-    opacity: 0;
+.film-container:hover .locandina-black{
+    opacity: 0.2;
+    background-color: black;
 }
 
 </style>
