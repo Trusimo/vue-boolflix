@@ -1,7 +1,7 @@
 <template>
     <div>
         {{ movieTitle }}
-        {{ movieLanguage }}
+        <span class="fi" :class="'fi-' + languageFlag"></span>
     </div>
 
 </template>
@@ -19,13 +19,19 @@ export default {
         }
         return this.movie.title;
     },
-        movieLanguage() {
-            console.log("lingua")
-            if (this.movie.original_language) {
-                return this.movie.original_language
-            }
-            return this.movie.original_language
-        }
+        languageFlag() {
+        const langsFlag = {
+            en: "us",
+            ja: "jp",
+            it: "it",
+            ko: "ko",
+            fr: "fr"
+    };
+        if (langsFlag[this.movie.original_language]) {
+        return langsFlag[this.movie.original_language];
+    }
+        return this.movie.original_language;
+    },
     } 
 }
 
