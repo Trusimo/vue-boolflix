@@ -1,12 +1,16 @@
 <template>
     <div id="app">
-        <ul>
-            <li v-for="movie in moviesList" :key="movie.id">
-                <MovieCards :movie="movie">
-                    {{ movie.original_title}}
-                </MovieCards>
-            </li>
-        </ul>
+        <div class="bg-grey">
+            <div class="container">
+            <div class="row gy-4">
+                <div class="col" v-for="movie in moviesList" :key="movie.id">
+                    <MovieCards :movie="movie">
+                        {{ movie.original_title}}
+                    </MovieCards>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 </template>
 
@@ -62,7 +66,11 @@ export default {
 
 
 <style>
-
+.bg-grey {
+    background-color: rgb(53, 52, 52);
+    height: 100vw;
+    padding: 30px;
+}
 
 
 </style>

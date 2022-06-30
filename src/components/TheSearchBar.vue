@@ -1,6 +1,8 @@
 <template>
     <div id="app">
-        <div class="container flex">
+        <div class="bg-black">
+            
+            <div class="container flex">
 
             <div>
                 <img class="logo-width" src="../../public/logo.png">
@@ -11,6 +13,7 @@
                 <button @click="cerca">Cerca</button>
             </div>
 
+        </div>
         </div>
 
     </div>
@@ -47,11 +50,14 @@ button {
     color: white;
 }
 
+.bg-black {
+    background-color: black;
+}
+
 .flex {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: black;
     padding: 30px;
 }
 

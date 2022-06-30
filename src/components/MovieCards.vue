@@ -1,10 +1,13 @@
 <template>
-    <div>
-        <img :src="locandina">
+    <div class="film-container">
+        <img class="locandina-black" :src="locandina">
 
-        {{ movieTitle }}
-        
-        <span class="fi" :class="'fi-' + languageFlag"></span>
+        <div class="overlay">
+            <div class="info-position">
+                {{ movieTitle }}
+                <span class="fi" :class="'fi-' + languageFlag"></span>
+            </div>
+        </div>
     </div>
 
 </template>
@@ -53,7 +56,34 @@ export default {
 
 <style>
 
+.film-container {
+    position: relative
+}
 
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.film-container:hover .overlay {
+    opacity: 1;
+}
+
+.info-position {
+    position: absolute;
+    top: 14%;
+    left: 4%;
+}
+
+.locandina-black:hover {
+    opacity: 0;
+}
 
 </style>
 
